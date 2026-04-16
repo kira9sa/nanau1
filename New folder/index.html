@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Maaf ya Naura imut cantik gumush</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom, #ffc0cb, #ffe4e1);
+      text-align: center;
+      color: #ff4d88;
+      overflow: hidden;
+    }
+
+    .container {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.3em;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: float 2s infinite;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yesBtn {
+      background-color: #ff66a3;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ffd6e7;
+      color: #ff4d88;
+      position: absolute;
+    }
+
+    #yesBtn:hover {
+      background-color: #ff3385;
+    }
+
+    #message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #ff1a75;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="heart">💖</div>
+  <h1>Maaf ya nanau</h1>
+
+  <p>
+    aku benar-benar minta maaf...<br>
+    aku sayang banget sama kamu <br>
+    kamu itu segalanya bagi aku, mwah 💕
+  </p>
+
+  <h2>kamu masih sayang aku nggak? hehe</h2>
+
+  <button id="yesBtn" onclick="yesClick()">Masih 💗</button>
+  <button id="noBtn" onmouseover="moveButton()">Enggak </button>
+
+  <div id="message">
+    Yeayyy! Makasih ya sayang<br>
+    Aku janji bakal lebih baik lagi 💖<br>
+    Love youuuuu 💕
+  </div>
+</div>
+
+<script>
+  function yesClick() {
+    document.getElementById("message").style.display = "block";
+  }
+
+  function moveButton() {
+    let button = document.getElementById("noBtn");
+    let x = Math.random() * window.innerWidth - 100;
+    let y = Math.random() * window.innerHeight - 50;
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+  }
+</script>
+
+</body>
+</html>
